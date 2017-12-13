@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" media="screen" href="styles.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nidhya Subramanian">
+	<meta name="description" content="A demonstration of my ability in designing a web page.">
+	
+</head>
+<body>
+	<div style="height:70%">
+		<h1 class="slideshow" style="background-color:#29f4cc;height:100%;text-align:bottom">Slide 1</h1>
+		<h1 class="slideshow" style="background-color:#d2a3ed;height:100%">Slide 2</h1>
+		<h1 class="slideshow" style="background-color:#e2eda3;height:100%">Slide 3</h1>
+		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+	
+	<div style="background-color:black;margin:5px 0px 5px 0px">
+		<p>Scroll down..</p>
+	</div>
+	
+	<div class="first">
+		<section>
+			<p>This has something to do with html learning</p>
+		</section>
+	</div>
+	
+	<div class="second">
+		<p>I wanted to include the parallax effect in my page</p>
+	</div>
+	
+	<div class="third">
+		<p>Rock and roll!!</p>
+	</div>
+	<script>
+		var slideIndex = 1;
+		carousel();
+		function plusDivs(n) {
+			carousel(slideIndex += n);
+		}
+		function carousel() {
+			var i;
+			var x = document.getElementsByClassName("slideshow");
+			for (i = 0; i < x.length; i++) {
+			  x[i].style.display = "none"; 
+			}
+			//slideIndex++;
+			if (slideIndex > x.length || slideIndex <= 0) {slideIndex = 1} 
+			x[slideIndex-1].style.display = "block"; 
+			//setTimeout(carousel, 2000); 
+		}
+</script>
+	
+</body>
+</html>
